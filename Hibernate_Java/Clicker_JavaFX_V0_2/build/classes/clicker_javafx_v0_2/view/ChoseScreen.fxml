@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="381.0" style="-fx-background-color: #aa99bb;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clicker_javafx_v0_2.view.MainControler">
+   <children>
+      <Button layoutX="275.0" layoutY="464.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-radius: 30;" text="Wyloguj">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font></Button>
+      <Button layoutX="259.0" layoutY="258.0" mnemonicParsing="false" onAction="#StartGameScreen" prefHeight="38.0" prefWidth="63.0" style="-fx-background-radius: 30;" text="Graj">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font></Button>
+      <Button layoutX="211.0" layoutY="306.0" mnemonicParsing="false" onAction="#createNewCharScreen" style="-fx-background-radius: 30;" text="Stwórz Gracza">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font></Button>
+      <Button layoutX="211.0" layoutY="355.0" mnemonicParsing="false" onAction="#handleDeleteGracz" prefHeight="38.0" prefWidth="160.0" style="-fx-background-radius: 30;" text="Usuń Gracza">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font></Button>
+      <GridPane layoutX="14.0" layoutY="258.0" prefHeight="149.0" prefWidth="200.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="81.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.0" minWidth="10.0" prefWidth="119.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Nazwa">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font></Label>
+            <Label prefHeight="26.0" prefWidth="78.0" text="Profesja" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font></Label>
+            <Label text="Świat" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font></Label>
+            <Label fx:id="charName" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font></Label>
+            <Label fx:id="charClass" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font></Label>
+            <Label fx:id="charWorld" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font></Label>
+            <Label text="Waluta" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font></Label>
+            <Label text="Doś." GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font></Label>
+            <Label fx:id="charGold" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font></Label>
+            <Label fx:id="charExp" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font></Label>
+         </children>
+      </GridPane>
+      <Button fx:id="buttonShow" layoutX="82.0" layoutY="55.0" mnemonicParsing="false" onAction="#showGracze" prefHeight="159.0" prefWidth="220.0" style="-fx-background-radius: 10;" text="Pokaż moich Graczy">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font></Button>
+      <ListView fx:id="listGracze" layoutX="91.0" layoutY="55.0" prefHeight="159.0" prefWidth="200.0" visible="false" />
+      <Label layoutX="97.0" layoutY="14.0" text="Wybierz gracza" textFill="#a82828" underline="true">
+         <font>
+            <Font name="Bauhaus 93" size="27.0" />
+         </font>
+      </Label>
+      <Button layoutX="211.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleDeleteKonto" prefHeight="38.0" prefWidth="160.0" style="-fx-background-radius: 30;" text="Usuń Konto ">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="30.0" layoutY="232.0" prefHeight="17.0" prefWidth="324.0" textFill="#f21b1b">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
